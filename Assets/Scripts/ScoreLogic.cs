@@ -14,7 +14,6 @@ public class ScoreLogic : MonoBehaviour
 
     public void AddToScore (int foodCondition)
     {
-        Debug.Log("Invoking score");
         switch (foodCondition)
         {
             case 0:
@@ -22,7 +21,6 @@ public class ScoreLogic : MonoBehaviour
                 break;
             case 1:
                 scoreImage.fillAmount += 0.05f;
-                Debug.Log("spit");
                 break;
             case 2:
                 scoreImage.fillAmount += 0.1f;
@@ -33,8 +31,7 @@ public class ScoreLogic : MonoBehaviour
             case 4:
                 scoreImage.fillAmount += 0.3f;
                 break;
-            default:
-                
+            default:                
                 break;
         }
     }

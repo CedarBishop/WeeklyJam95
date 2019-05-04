@@ -5,16 +5,24 @@ using UnityEngine;
 [System.Serializable]
 public class FoodStatus : MonoBehaviour
 {
-    public enum foodStatus { UnSpoilt, SpatOn, PeedOn, ThirdOption, FourthOption};
+    public enum foodStatus { UnSpoilt, SpatOn, PeedOn, ThirdOption, FourthOption };
     public foodStatus currentFoodStatus;
     public bool isReady;
     public float timeTillReady;
 
     private SpriteRenderer spriteRenderer;
     private ScoreLogic scoreLogic;
+    private int spawnTransformIndex;
+    private FoodSpawner foodSpawner;
+
+    public int SpawnTransformIndex 
+    {
+        set { spawnTransformIndex = value; }
+    }
 
     void Start ()
     {
+        foodSpawner = GameObject.Find("Scene Manager").GetComponent<FoodSpawner>();
         scoreLogic = GameObject.Find("Scene Manager").GetComponent<ScoreLogic>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         isReady = false;
@@ -25,8 +33,9 @@ public class FoodStatus : MonoBehaviour
     {
         yield return new WaitForSeconds(timeTillReady);
         isReady = true;
-        Debug.Log("finish coroutine");
         scoreLogic.AddToScore((int)currentFoodStatus);
+        foodSpawner.ClearSpawnLocation(spawnTransformIndex);
+        Destroy(gameObject);
     }
 
     public void ChangeFoodStatus (int status)

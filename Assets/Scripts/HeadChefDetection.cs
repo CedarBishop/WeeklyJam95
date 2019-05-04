@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HeadChefDetection : MonoBehaviour
 {
     public float detectionRadius = 3;
+    public LayerMask whatCanBeDetected;
 
     private GameOver gameOver;
     private FoodInteraction foodInteraction;
@@ -31,10 +32,15 @@ public class HeadChefDetection : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, player.position) < detectionRadius && foodInteraction.isSpoilingFood && canDetect)
         {
-            warningsImage.fillAmount += 0.333334f;
-            canDetect = false;
-            StartCoroutine("CoDetectCooldown");
-        }
+            Vector3 targetDirection = (player.position - transform.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, detectionRadius, whatCanBeDetected);
+            if (hit.collider.name == "Player")
+            {  
+                warningsImage.fillAmount += 0.333334f;
+                canDetect = false;
+                StartCoroutine("CoDetectCooldown");
+            }          
+        }        
     }
 
     IEnumerator CoDetectCooldown ()
