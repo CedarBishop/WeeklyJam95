@@ -1709,6 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372814659}
   - component: {fileID: 1372814658}
+  - component: {fileID: 1372814660}
   m_Layer: 0
   m_Name: Scene Manager
   m_TagString: Untagged
@@ -1728,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dc7fd44eb810f428f6c9150f9c28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: GameScene
 --- !u!4 &1372814659
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,6 +1744,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1372814660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372814657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed06b0541b8c334bbc663285e660424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreImage: {fileID: 1744226294}
 --- !u!1 &1446515731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1769,7 @@ GameObject:
   - component: {fileID: 1446515733}
   - component: {fileID: 1446515732}
   - component: {fileID: 1446515735}
+  - component: {fileID: 1446515736}
   m_Layer: 0
   m_Name: Head Chef
   m_TagString: Untagged
@@ -1866,6 +1881,19 @@ MonoBehaviour:
   - {fileID: 483362249}
   - {fileID: 498293426}
   speed: 2
+--- !u!114 &1446515736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446515731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdd03cf85ae0ca4ab1a716f4933c9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 3
 --- !u!1 &1586335017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2311,11 @@ PrefabInstance:
     - target: {fileID: 2048846672982566052, guid: 096e3e8eccd46f44da7f5dc90c2e7410,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795720944423667813, guid: 096e3e8eccd46f44da7f5dc90c2e7410,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

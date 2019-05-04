@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class FoodInteraction : MonoBehaviour
 {
-    public LayerMask whatIsFood;
-    public float raycastLength = 1;
     public float spitTime = 3;
     public float peeTime = 10;
     [HideInInspector]public bool isSpoilingFood;
@@ -18,41 +16,34 @@ public class FoodInteraction : MonoBehaviour
 
     void Start()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         hintText = GameObject.Find("Hint Text").GetComponent<Text>();
         waitingBarImage = GameObject.Find("Waiting Bar Image").GetComponent<Image>();
         waitingBarImage.gameObject.SetActive(false);
     }
 
-    void Update()
+    void OnTriggerStay2D (Collider2D other)
     {
-        RaycastInAllDirections();
-    }
-
-    void RaycastInAllDirections ()
-    {
-        isNextToFood = Physics2D.Raycast(transform.position, Vector2.up, raycastLength, whatIsFood)
-            || Physics2D.Raycast(transform.position, Vector2.down, raycastLength, whatIsFood)
-            || Physics2D.Raycast(transform.position, Vector2.left, raycastLength, whatIsFood)
-            || Physics2D.Raycast(transform.position, Vector2.right, raycastLength, whatIsFood);
-        if (isNextToFood)
-        {
+        if (other.gameObject.tag == "Food" && isSpoilingFood == false)
+        { 
             hintText.text = "Press Option To Spoil Food";
             if (Input.GetKeyDown(KeyCode.I))
             {
+                other.GetComponent<FoodStatus>().ChangeFoodStatus(1);
                 StartCoroutine("CoSpitInFood");
             }
             else if (Input.GetKeyDown(KeyCode.J))
             {
+                other.GetComponent<FoodStatus>().ChangeFoodStatus(2);
                 StartCoroutine("CoPeeInFood");
             }
             else if (Input.GetKeyDown(KeyCode.K))
             {
-
+                other.GetComponent<FoodStatus>().ChangeFoodStatus(3);
             }
             else if (Input.GetKeyDown(KeyCode.L))
             {
-
+                other.GetComponent<FoodStatus>().ChangeFoodStatus(4);
             }
         }
         else
@@ -63,6 +54,8 @@ public class FoodInteraction : MonoBehaviour
 
     IEnumerator CoSpitInFood()
     {
+        isSpoilingFood = true;
+        playerMovement.LockPlayerMovement();
         playerMovement.enabled = false;
         waitingBarImage.gameObject.SetActive(true);
         waitingBarImage.fillAmount = 1;
@@ -72,11 +65,14 @@ public class FoodInteraction : MonoBehaviour
             yield return null;
         }
         playerMovement.enabled = true;
+        isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);
     }
 
     IEnumerator CoPeeInFood ()
     {
+        isSpoilingFood = true;
+        playerMovement.LockPlayerMovement();
         playerMovement.enabled = false;
         waitingBarImage.gameObject.SetActive(true);
         waitingBarImage.fillAmount = 1;
@@ -86,6 +82,7 @@ public class FoodInteraction : MonoBehaviour
             yield return null;
         }
         playerMovement.enabled = true;
+        isSpoilingFood = false; 
         waitingBarImage.gameObject.SetActive(false);
     }
 }

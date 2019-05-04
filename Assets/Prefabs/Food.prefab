@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9132336702068682665}
   m_Layer: 8
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,4 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentFoodStatus: 0
   isReady: 0
-  timeTillReady: 0
+  timeTillReady: 20

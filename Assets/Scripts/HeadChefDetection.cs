@@ -18,7 +18,7 @@ public class HeadChefDetection : MonoBehaviour
         canDetect = true;
         warningsImage = GameObject.Find("Warnings Image").GetComponent<Image>();
         warningsImage.fillAmount = 0;
-        foodInteraction = GameObject.FindGameObjectWithTag("Player").GetComponent<FoodInteraction>();
+        foodInteraction = GameObject.Find("Detection Trigger").GetComponent<FoodInteraction>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         gameOver = GameObject.Find("Scene Manager").GetComponent<GameOver>();
     }

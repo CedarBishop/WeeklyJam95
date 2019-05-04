@@ -19,4 +19,8 @@ public class PlayerMovement : MonoBehaviour
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         playerRB.velocity = direction * speed * Time.deltaTime;
     }
+    public void LockPlayerMovement ()
+    {
+        playerRB.velocity = new Vector2(0,0);
+    }
 }
