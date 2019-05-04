@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FoodStatus : MonoBehaviour
 {
-    public enum foodStatus { UnSpoilt, SpatOn,PeedOn, ThirdOption, FourthOption};
+    public enum foodStatus { UnSpoilt, SpatOn, PeedOn, ThirdOption, FourthOption};
     public foodStatus currentFoodStatus;
     public bool isReady;
     public float timeTillReady;
@@ -13,5 +13,6 @@ public class FoodStatus : MonoBehaviour
     IEnumerator ReadyingFood ()
     {
         yield return new WaitForSeconds(timeTillReady);
+        isReady = true;
     }
 }

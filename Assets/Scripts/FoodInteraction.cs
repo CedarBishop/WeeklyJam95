@@ -9,7 +9,7 @@ public class FoodInteraction : MonoBehaviour
     public float raycastLength = 1;
     public float spitTime = 3;
     public float peeTime = 10;
-    public Image scoreBar;
+    [HideInInspector]public bool isSpoilingFood;
 
     private PlayerMovement playerMovement;
     private Text hintText;
@@ -18,7 +18,6 @@ public class FoodInteraction : MonoBehaviour
 
     void Start()
     {
-        scoreBar.fillAmount = 0;
         playerMovement = GetComponent<PlayerMovement>();
         hintText = GameObject.Find("Hint Text").GetComponent<Text>();
         waitingBarImage = GameObject.Find("Waiting Bar Image").GetComponent<Image>();
@@ -74,7 +73,6 @@ public class FoodInteraction : MonoBehaviour
         }
         playerMovement.enabled = true;
         waitingBarImage.gameObject.SetActive(false);
-        scoreBar.fillAmount += 5 / 100;
     }
 
     IEnumerator CoPeeInFood ()
@@ -89,6 +87,5 @@ public class FoodInteraction : MonoBehaviour
         }
         playerMovement.enabled = true;
         waitingBarImage.gameObject.SetActive(false);
-        scoreBar.fillAmount += 20 / 100;
     }
 }
