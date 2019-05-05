@@ -26,10 +26,10 @@ public class ScoreLogic : MonoBehaviour
                 scoreImage.fillAmount += 0.1f;
                 break;
             case 3:
-                scoreImage.fillAmount += 0.2f;
+                scoreImage.fillAmount += 0.25f;
                 break;
             case 4:
-                scoreImage.fillAmount += 0.3f;
+                scoreImage.fillAmount += 0.5f;
                 break;
             default:                
                 break;
