@@ -13,12 +13,14 @@ public class FoodInteraction : MonoBehaviour
     [HideInInspector]public bool isSpoilingFood;
 
     private PlayerMovement playerMovement;
+    private FlyAmmoLogic flyAmmoLogic;
     private Text hintText;
     private Image waitingBarImage;
     private bool isNextToFood;    
 
     void Start()
     {
+        flyAmmoLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<FlyAmmoLogic>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         hintText = GameObject.Find("Hint Text").GetComponent<Text>();
         waitingBarImage = GameObject.Find("Waiting Bar Image").GetComponent<Image>();
@@ -30,8 +32,9 @@ public class FoodInteraction : MonoBehaviour
         if (other.gameObject.tag == "Food" && isSpoilingFood == false)
         { 
             hintText.text = "Press Option To Spoil Food";
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.I) && flyAmmoLogic.flyAmmoImage.fillAmount >= 0.25f)
             {
+                flyAmmoLogic.UseFlyAmmo();
                 SoundManager.instance.PlaySFX(spoilSFX[0]);
                 StartCoroutine("CoDropFlyInFood", other);
             }
