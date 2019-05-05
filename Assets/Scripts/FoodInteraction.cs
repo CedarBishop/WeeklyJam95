@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class FoodInteraction : MonoBehaviour
 {
     public float spitTime = 3;
+    public float dropFlyTime = 5;
     public float peeTime = 10;
+    public float pooTime = 15;
     [HideInInspector]public bool isSpoilingFood;
 
     private PlayerMovement playerMovement;
@@ -28,22 +30,20 @@ public class FoodInteraction : MonoBehaviour
         { 
             hintText.text = "Press Option To Spoil Food";
             if (Input.GetKeyDown(KeyCode.I))
-            {
-                other.GetComponent<FoodStatus>().ChangeFoodStatus(1);
-                StartCoroutine("CoSpitInFood");
+            {               
+                StartCoroutine("CoSpitInFood",other);
             }
             else if (Input.GetKeyDown(KeyCode.J))
             {
-                other.GetComponent<FoodStatus>().ChangeFoodStatus(2);
-                StartCoroutine("CoPeeInFood");
+                StartCoroutine("CoDropFlyInFood",other);
             }
             else if (Input.GetKeyDown(KeyCode.K))
             {
-                other.GetComponent<FoodStatus>().ChangeFoodStatus(3);
+                StartCoroutine("CoPeeInFood", other);
             }
             else if (Input.GetKeyDown(KeyCode.L))
             {
-                other.GetComponent<FoodStatus>().ChangeFoodStatus(4);
+                StartCoroutine("CoPooInFood", other);
             }
         }
         else
@@ -52,37 +52,76 @@ public class FoodInteraction : MonoBehaviour
         }   
     }
 
-    IEnumerator CoSpitInFood()
+    IEnumerator CoSpitInFood(Collider2D other)
     {
-        isSpoilingFood = true;
-        playerMovement.LockPlayerMovement();
-        playerMovement.enabled = false;
-        waitingBarImage.gameObject.SetActive(true);
-        waitingBarImage.fillAmount = 1;
+        StartSpoiling();
         while (waitingBarImage.fillAmount > 0)
         {
             waitingBarImage.fillAmount -= (1 / (spitTime * 60));
             yield return null;
         }
+        other.GetComponent<FoodStatus>().ChangeFoodStatus(1);
         playerMovement.enabled = true;
         isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);
     }
 
-    IEnumerator CoPeeInFood ()
+    IEnumerator CoDropFlyInFood(Collider2D other)
+    {
+        StartSpoiling();
+        while (waitingBarImage.fillAmount > 0)
+        {
+            waitingBarImage.fillAmount -= (1 / (dropFlyTime * 60));
+            yield return null;
+        }
+        other.GetComponent<FoodStatus>().ChangeFoodStatus(2);
+        playerMovement.enabled = true;
+        isSpoilingFood = false;
+        waitingBarImage.gameObject.SetActive(false);
+    }
+
+    IEnumerator CoPeeInFood (Collider2D other)
+    {
+        StartSpoiling();        
+        while (waitingBarImage.fillAmount > 0)
+        {
+            waitingBarImage.fillAmount -= (1 / (peeTime * 60));
+            yield return null;
+        }
+        other.GetComponent<FoodStatus>().ChangeFoodStatus(3);
+        playerMovement.enabled = true;
+        isSpoilingFood = false; 
+        waitingBarImage.gameObject.SetActive(false);
+    }
+
+    IEnumerator CoPooInFood(Collider2D other)
+    {
+        StartSpoiling();
+        while (waitingBarImage.fillAmount > 0)
+        {
+            waitingBarImage.fillAmount -= (1 / (pooTime * 60));
+            yield return null;
+        }
+        other.GetComponent<FoodStatus>().ChangeFoodStatus(4);
+        playerMovement.enabled = true;
+        isSpoilingFood = false;
+        waitingBarImage.gameObject.SetActive(false);
+    }
+
+    void StartSpoiling ()
     {
         isSpoilingFood = true;
         playerMovement.LockPlayerMovement();
         playerMovement.enabled = false;
         waitingBarImage.gameObject.SetActive(true);
         waitingBarImage.fillAmount = 1;
-        while (waitingBarImage.fillAmount > 0)
-        {
-            waitingBarImage.fillAmount -= (1 / (peeTime * 60));
-            yield return null;
-        }
+    }
+
+    public void StopSpoiling ()
+    {
+        StopAllCoroutines();
         playerMovement.enabled = true;
-        isSpoilingFood = false; 
+        isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);
     }
 }

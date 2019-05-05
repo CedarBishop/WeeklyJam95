@@ -1894,6 +1894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814106, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 774705127}
     - target: {fileID: 6904897538814111, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1978,10 +1982,6 @@ PrefabInstance:
       propertyPath: spawnLocations.Array.data[8]
       value: 
       objectReference: {fileID: 1313795160}
-    - target: {fileID: 6904897538814106, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
-      propertyPath: pauseCanvas
-      value: 
-      objectReference: {fileID: 774705127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
 --- !u!1001 &1495235722898876566
@@ -2126,6 +2126,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[13]
       value: 
       objectReference: {fileID: 805857874}
+    - target: {fileID: 6521886954949351450, guid: 26577845c8e037e43917724bd92db9b7,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6521886954949351445, guid: 26577845c8e037e43917724bd92db9b7,
         type: 3}
       propertyPath: detectionRadius
@@ -2602,6 +2607,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[11]
       value: 
       objectReference: {fileID: 498293426}
+    - target: {fileID: 7472175326277935247, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7472175326277935232, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
         type: 3}
       propertyPath: detectionRadius

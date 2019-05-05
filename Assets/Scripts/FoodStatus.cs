@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class FoodStatus : MonoBehaviour
 {
-    public enum foodStatus { UnSpoilt, SpatOn, PeedOn, ThirdOption, FourthOption };
+    public enum foodStatus { UnSpoilt, SpatOn, FlyDroppedOn , PeedOn, PooedOn };
     public foodStatus currentFoodStatus;
     public bool isReady;
     public float timeTillReady;
@@ -44,19 +44,19 @@ public class FoodStatus : MonoBehaviour
         {
             case 1:
                 currentFoodStatus = foodStatus.SpatOn;
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = Color.cyan;
                 break;
             case 2:
+                currentFoodStatus = foodStatus.FlyDroppedOn;
+                spriteRenderer.color = new Color(10,10,10); ;
+                break;
+            case 3:
                 currentFoodStatus = foodStatus.PeedOn;
                 spriteRenderer.color = Color.yellow;
                 break;
-            case 3:
-                currentFoodStatus = foodStatus.ThirdOption;
-                spriteRenderer.color = Color.black;
-                break;
             case 4:
-                currentFoodStatus = foodStatus.FourthOption;
-                spriteRenderer.color = Color.green;
+                currentFoodStatus = foodStatus.PooedOn;
+                spriteRenderer.color = new Color(210,105,30);
                 break;
             default:
                 break;
