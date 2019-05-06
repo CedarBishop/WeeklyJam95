@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class FoodInteraction : MonoBehaviour
 {
     public float dropFlyTime = 3;
-    public float spitTime = 7;
-    public float peeTime = 11;
+    public float spitTime = 5;
+    public float peeTime = 10;
     public float pooTime = 15;
     public AudioClip[] spoilSFX;
     [HideInInspector]public bool isSpoilingFood;

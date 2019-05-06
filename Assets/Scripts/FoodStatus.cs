@@ -8,8 +8,8 @@ public class FoodStatus : MonoBehaviour
     public enum foodStatus { UnSpoilt, FlyDroppedOn, SpatOn, PeedOn, PooedOn, isBeingSpoiled };
     public foodStatus currentFoodStatus;
     [HideInInspector]public bool isReady;
+    public SpriteRenderer spriteRenderer;
 
-    private SpriteRenderer spriteRenderer;
     private ScoreLogic scoreLogic;
     private int spawnTransformIndex;
     private FoodSpawner foodSpawner;
@@ -27,7 +27,6 @@ public class FoodStatus : MonoBehaviour
         foodSpawner = GameObject.Find("Scene Manager").GetComponent<FoodSpawner>();
         scoreLogic = GameObject.Find("Scene Manager").GetComponent<ScoreLogic>();
         foodInteraction = GameObject.Find("Detection Trigger").GetComponent<FoodInteraction>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update ()
