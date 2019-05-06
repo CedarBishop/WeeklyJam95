@@ -11,11 +11,13 @@ public class FoodStatus : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     private ScoreLogic scoreLogic;
-    private int spawnTransformIndex;
     private FoodSpawner foodSpawner;
     private Transform headChefTransform;
     private FoodInteraction foodInteraction;
-
+    private int spawnTransformIndex;
+    private bool isChangingColor;
+    private float timeToChange;
+    private Color colorToBe;
     public int SpawnTransformIndex 
     {
         set { spawnTransformIndex = value; }
@@ -34,7 +36,13 @@ public class FoodStatus : MonoBehaviour
         if (Vector3.Distance(transform.position,headChefTransform.position) < 3 && isReady == false && this.currentFoodStatus != foodStatus.isBeingSpoiled)
         {
             ReadyingFood();
-        }       
+        }
+        if (isChangingColor)
+        {
+            spriteRenderer.color = Color.Lerp(Color.white,colorToBe,timeToChange );
+            isChangingColor = (spriteRenderer.color == colorToBe) ? false : true;
+        }
+
     }
 
     void ReadyingFood ()
@@ -50,20 +58,16 @@ public class FoodStatus : MonoBehaviour
         switch (status)
         {
             case 1:
-                currentFoodStatus = foodStatus.FlyDroppedOn;
-                spriteRenderer.color = Color.grey;
+                currentFoodStatus = foodStatus.FlyDroppedOn;               
                 break;
             case 2:
-                currentFoodStatus = foodStatus.SpatOn;
-                spriteRenderer.color = Color.cyan; ;
+                currentFoodStatus = foodStatus.SpatOn;                
                 break;
             case 3:
-                currentFoodStatus = foodStatus.PeedOn;
-                spriteRenderer.color = Color.yellow;
+                currentFoodStatus = foodStatus.PeedOn;                
                 break;
             case 4:
                 currentFoodStatus = foodStatus.PooedOn;
-                spriteRenderer.color = new Color(210,105,30);
                 break;
             case 5:
                 currentFoodStatus = foodStatus.isBeingSpoiled;
@@ -71,6 +75,39 @@ public class FoodStatus : MonoBehaviour
                 break;
             default:                
                 break;                
+        }
+    }
+
+    public void ChangeFoodColor(int status)
+    {
+        switch (status)
+        {
+            case 1:
+                colorToBe = Color.grey;
+                timeToChange = foodInteraction.dropFlyTime;
+                isChangingColor = true;
+                break;
+            case 2:
+                colorToBe = Color.cyan;
+                timeToChange = foodInteraction.spitTime;
+                isChangingColor = true;
+                break;
+            case 3:
+                colorToBe = Color.yellow;
+                timeToChange = foodInteraction.peeTime;
+                isChangingColor = true;
+                break;
+            case 4:
+                colorToBe = new Color(210, 105, 30);
+                timeToChange = foodInteraction.pooTime;
+                isChangingColor = true;
+                break;
+            case 5:
+                currentFoodStatus = foodStatus.isBeingSpoiled;
+                spriteRenderer.color = new Color(255, 255, 255);
+                break;
+            default:
+                break;
         }
     }
 }

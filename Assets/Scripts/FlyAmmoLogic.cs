@@ -26,6 +26,8 @@ public class FlyAmmoLogic : MonoBehaviour
 
     IEnumerator CoReActivateFly (Collider2D other)
     {
+        int randomIndex = Random.Range(0, other.GetComponent<FlyMovement>().waypoints.Length);
+        other.gameObject.transform.position = other.GetComponent<FlyMovement>().waypoints[randomIndex].position;
         yield return new WaitForSeconds(timeTillReactivation);
         other.gameObject.SetActive(true);
     }
