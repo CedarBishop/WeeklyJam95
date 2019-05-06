@@ -32,14 +32,10 @@ public class FoodStatus : MonoBehaviour
 
     void Update ()
     {
-        if (Vector3.Distance(transform.position,headChefTransform.position) < 2 && isReady == false && currentFoodStatus  != foodStatus.isBeingSpoiled)
+        if (Vector3.Distance(transform.position,headChefTransform.position) < 3 && isReady == false && this.currentFoodStatus != foodStatus.isBeingSpoiled)
         {
             ReadyingFood();
-        }
-        else if (Vector3.Distance(transform.position, headChefTransform.position) < 2 && isReady == false && currentFoodStatus == foodStatus.isBeingSpoiled)
-        {
-            foodInteraction.StopSpoiling();
-        }
+        }       
     }
 
     void ReadyingFood ()

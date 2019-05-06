@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyAmmoImage: {fileID: 1726096782}
-  timeTillReactivation: 5
+  timeTillReactivation: 10
 --- !u!1 &1586335017
 GameObject:
   m_ObjectHideFlags: 0
