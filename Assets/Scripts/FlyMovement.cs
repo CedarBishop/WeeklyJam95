@@ -11,7 +11,7 @@ public class FlyMovement : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, waypoints[index].position) > Mathf.Epsilon)
         {
-            transform.position = Vector3.MoveTowards(transform.position,waypoints[index].position,speed);
+            transform.position = Vector3.MoveTowards(transform.position,waypoints[index].position,speed * Time.deltaTime);
         }
         else
         {

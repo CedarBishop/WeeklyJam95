@@ -2271,6 +2271,11 @@ PrefabInstance:
       propertyPath: speed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5641972908808623165, guid: 096e3e8eccd46f44da7f5dc90c2e7410,
+        type: 3}
+      propertyPath: spoilSFX.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2902c09075cbd524680ea1dc2b60eef4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 096e3e8eccd46f44da7f5dc90c2e7410, type: 3}
 --- !u!1001 &3473652201789869466
@@ -2284,6 +2289,35 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d86c2e35da22e68499a46d053afd456a,
+        type: 3}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096782, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3473652199837850295, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
@@ -2389,6 +2423,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096781, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096781, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096781, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726096780, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_Name
+      value: Fly Ammo Image
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
@@ -2519,6 +2569,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[11]
       value: 
       objectReference: {fileID: 483362249}
+    - target: {fileID: 5557411704197220159, guid: c5d0368ac7f7c604ca807445f52f4386,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d0368ac7f7c604ca807445f52f4386, type: 3}
 --- !u!1001 &6122853437450979862

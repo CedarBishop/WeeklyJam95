@@ -7,16 +7,15 @@ public class HeadChefDetection : MonoBehaviour
 {
     public float detectionRadius = 3;
     public LayerMask whatCanBeDetected;
+    public AudioClip DetectionSFX;
 
     private GameOver gameOver;
     private FoodInteraction foodInteraction;
     private Transform player;
     private Image warningsImage;
-    private bool canDetect;
 
     void Start()
     {
-        canDetect = true;
         warningsImage = GameObject.Find("Warnings Image").GetComponent<Image>();
         warningsImage.fillAmount = 0;
         foodInteraction = GameObject.Find("Detection Trigger").GetComponent<FoodInteraction>();
@@ -30,23 +29,18 @@ public class HeadChefDetection : MonoBehaviour
         {
             gameOver.OnGameOver();
         }
-        else if (Vector3.Distance(transform.position, player.position) < detectionRadius && foodInteraction.isSpoilingFood && canDetect)
+        else if (Vector3.Distance(transform.position, player.position) < detectionRadius && foodInteraction.isSpoilingFood)
         {
             Vector3 targetDirection = (player.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, targetDirection, detectionRadius, whatCanBeDetected);
             if (hit.collider.name == "Player")
-            {  
+            {
+                SoundManager.instance.PlaySFX(DetectionSFX);
                 warningsImage.fillAmount += 0.333334f;
-                canDetect = false;
                 foodInteraction.StopSpoiling();
-               // StartCoroutine("CoDetectCooldown");
             }          
         }        
     }
 
-    IEnumerator CoDetectCooldown ()
-    {
-        yield return new WaitForSeconds(20);
-        canDetect = true;
-    }
+   
 }
