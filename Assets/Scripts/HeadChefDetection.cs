@@ -38,7 +38,8 @@ public class HeadChefDetection : MonoBehaviour
             {  
                 warningsImage.fillAmount += 0.333334f;
                 canDetect = false;
-                StartCoroutine("CoDetectCooldown");
+                foodInteraction.StopSpoiling();
+               // StartCoroutine("CoDetectCooldown");
             }          
         }        
     }
