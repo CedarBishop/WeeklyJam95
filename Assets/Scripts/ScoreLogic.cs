@@ -13,8 +13,11 @@ public class ScoreLogic : MonoBehaviour
     public string[] reviews = new string[5];
     [Range(-1,1)]public float[] scores = new float[5];
 
+    private GameWin gameWin;
+
     void Start()
     {
+        gameWin = GetComponent<GameWin>();
         reviewText.text = "";
         scoreImage.fillAmount = 0;
     }
@@ -24,6 +27,7 @@ public class ScoreLogic : MonoBehaviour
         reviewText.text = reviews[foodCondition];
         scoreImage.fillAmount += scores[foodCondition];       
         StartCoroutine("ResetText");
+        CheckIfGameIsWon();
     }
 
     IEnumerator ResetText ()
@@ -35,5 +39,13 @@ public class ScoreLogic : MonoBehaviour
             yield return null;
         }
         reviewText.text = "";
+    }
+
+    void CheckIfGameIsWon ()
+    {
+        if (scoreImage.fillAmount == 1)
+        {
+            gameWin.OnGameWin();
+        }
     }
 }
