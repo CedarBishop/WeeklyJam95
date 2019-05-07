@@ -62,7 +62,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoDropFlyInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-        other.GetComponent<FoodStatus>().ChangeFoodColor(1);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(1);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -76,7 +76,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoSpitInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-        other.GetComponent<FoodStatus>().ChangeFoodColor(2);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(2);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -92,7 +92,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPeeInFood (Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-        other.GetComponent<FoodStatus>().ChangeFoodColor(3);
+        //other.GetComponent<FoodStatus>().ChangeFoodColor(3);
         StartOfCoroutine();        
         while (waitingBarImage.fillAmount > 0)
         {
@@ -106,7 +106,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPooInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-        other.GetComponent<FoodStatus>().ChangeFoodColor(4);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(4);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
