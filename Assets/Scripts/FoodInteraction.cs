@@ -14,12 +14,14 @@ public class FoodInteraction : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private FlyAmmoLogic flyAmmoLogic;
+    private AnimationInput animationInput;
     private Text hintText;
     private Image waitingBarImage;
     private bool isNextToFood;    
 
     void Start()
     {
+        animationInput = GameObject.Find("Player").GetComponent<AnimationInput>();
         flyAmmoLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<FlyAmmoLogic>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         hintText = GameObject.Find("Hint Text").GetComponent<Text>();
@@ -120,6 +122,7 @@ public class FoodInteraction : MonoBehaviour
     void StartOfCoroutine ()
     {
         isSpoilingFood = true;
+        animationInput.enabled = false;
         playerMovement.LockPlayerMovement();
         playerMovement.enabled = false;
         waitingBarImage.gameObject.SetActive(true);
@@ -128,6 +131,7 @@ public class FoodInteraction : MonoBehaviour
 
     void EndOfCoroutine ( )
     {
+        animationInput.enabled = true;
         playerMovement.enabled = true;
         isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);

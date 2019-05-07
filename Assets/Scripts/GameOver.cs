@@ -10,14 +10,15 @@ public class GameOver : MonoBehaviour
 
     void Start ()
     {
+        Time.timeScale = 1;
         gameOverCanvas.gameObject.SetActive(false);
     }
 
     public void OnGameOver ()
     {
-        SoundManager.instance.PlaySFX(gameOverSFX);
         Time.timeScale = 0;
         gameOverCanvas.gameObject.SetActive(true);
+        SoundManager.instance.PlaySFX(gameOverSFX);
     }
 
     public void RestartLevel()
