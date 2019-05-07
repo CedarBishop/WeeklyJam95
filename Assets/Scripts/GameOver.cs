@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public string sceneName;
+    public Canvas gameOverCanvas;
+
+    void Start ()
+    {
+        gameOverCanvas.gameObject.SetActive(false);
+    }
 
     public void OnGameOver ()
     {
-        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 0;
+        gameOverCanvas.gameObject.SetActive(true);
+    }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

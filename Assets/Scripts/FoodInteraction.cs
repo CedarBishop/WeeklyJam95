@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class FoodInteraction : MonoBehaviour
 {
     public float dropFlyTime = 3;
-    public float spitTime = 7;
-    public float peeTime = 11;
+    public float spitTime = 5;
+    public float peeTime = 10;
     public float pooTime = 15;
     public AudioClip[] spoilSFX;
     [HideInInspector]public bool isSpoilingFood;
@@ -29,7 +29,7 @@ public class FoodInteraction : MonoBehaviour
 
     void OnTriggerStay2D (Collider2D other)
     {
-        if (other.gameObject.tag == "Food" && isSpoilingFood == false)
+        if (other.gameObject.tag == "Food" && isSpoilingFood == false && (other.GetComponent<FoodStatus>().currentFoodStatus == FoodStatus.foodStatus.UnSpoilt || other.GetComponent<FoodStatus>().currentFoodStatus == FoodStatus.foodStatus.isBeingSpoiled))
         { 
             hintText.text = "Press Option To Spoil Food";
             if (Input.GetKeyDown(KeyCode.I) && flyAmmoLogic.flyAmmoImage.fillAmount >= 0.25f)
@@ -62,6 +62,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoDropFlyInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(1);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -75,6 +76,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoSpitInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(2);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -90,6 +92,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPeeInFood (Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
+        //other.GetComponent<FoodStatus>().ChangeFoodColor(3);
         StartOfCoroutine();        
         while (waitingBarImage.fillAmount > 0)
         {
@@ -103,6 +106,7 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPooInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
+       // other.GetComponent<FoodStatus>().ChangeFoodColor(4);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {

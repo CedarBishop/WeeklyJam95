@@ -137,3 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRadius: 3
+  whatCanBeDetected:
+    serializedVersion: 2
+    m_Bits: 512
+  DetectionSFX: {fileID: 8300000, guid: f9e77ffe257c1a64dba0bab0eb892c4f, type: 3}
