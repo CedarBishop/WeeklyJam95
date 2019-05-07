@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -1341275017183523590
     second: Max's Spritesheet_3
+  - first:
+      213: 1726546199352748654
+    second: Max's Spritesheet_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -165,11 +168,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 65
-        y: 224
+        y: 223
         width: 95
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,11 +189,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 288
+        y: 287
         width: 96
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,6 +201,27 @@ TextureImporter:
       bones: []
       spriteID: a89c4a91229733748943d6ac6668e365
       internalID: -1341275017183523590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Max's Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 64
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9808985bfc2f34444a0e23a6c762c4e7
+      internalID: 1726546199352748654
       vertices: []
       indices: 
       edges: []

@@ -7,6 +7,7 @@ public class GameWin : MonoBehaviour
 {
     public Canvas gameWinCanvas;
     public string nextLevel;
+    public AudioClip victorySFX;
     void Start()
     {
         gameWinCanvas.gameObject.SetActive(false);
@@ -14,6 +15,7 @@ public class GameWin : MonoBehaviour
 
     public void OnGameWin ()
     {
+        SoundManager.instance.PlaySFX(victorySFX);
         Time.timeScale = 0;
         gameWinCanvas.gameObject.SetActive(true);
     }

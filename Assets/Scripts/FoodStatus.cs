@@ -70,11 +70,11 @@ public class FoodStatus : MonoBehaviour
                 break;
             case 4:
                 currentFoodStatus = foodStatus.PooedOn;
-                spriteRenderer.color = new Color(200,120,50);
+                spriteRenderer.color = new Color(200/255,120/255,50/255);
                 break;
             case 5:
                 currentFoodStatus = foodStatus.isBeingSpoiled;
-                spriteRenderer.color = new Color(255, 255, 255);
+                spriteRenderer.color = new Color(1, 1, 1);
                 break;
             default:                
                 break;                

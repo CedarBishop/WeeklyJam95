@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public Canvas gameOverCanvas;
+    public AudioClip gameOverSFX;
 
     void Start ()
     {
@@ -14,6 +15,7 @@ public class GameOver : MonoBehaviour
 
     public void OnGameOver ()
     {
+        SoundManager.instance.PlaySFX(gameOverSFX);
         Time.timeScale = 0;
         gameOverCanvas.gameObject.SetActive(true);
     }
