@@ -14,12 +14,14 @@ public class FoodInteraction : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private FlyAmmoLogic flyAmmoLogic;
+    private AnimationInput animationInput;
     private Text hintText;
     private Image waitingBarImage;
     private bool isNextToFood;    
 
     void Start()
     {
+        animationInput = GameObject.Find("Player").GetComponent<AnimationInput>();
         flyAmmoLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<FlyAmmoLogic>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         hintText = GameObject.Find("Hint Text").GetComponent<Text>();
@@ -66,8 +68,8 @@ public class FoodInteraction : MonoBehaviour
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
-            waitingBarImage.fillAmount -= (1 / (dropFlyTime * 60));
-            yield return null;
+            waitingBarImage.fillAmount -= (1 / (dropFlyTime / Time.deltaTime));
+            yield return new WaitForSeconds(Time.deltaTime);
         }
         other.GetComponent<FoodStatus>().ChangeFoodStatus(1);
         EndOfCoroutine();
@@ -80,8 +82,8 @@ public class FoodInteraction : MonoBehaviour
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
-            waitingBarImage.fillAmount -= (1 / (spitTime * 60));
-            yield return null;
+            waitingBarImage.fillAmount -= (1 / (spitTime / Time.deltaTime));
+            yield return new WaitForSeconds(Time.deltaTime);
         }
         other.GetComponent<FoodStatus>().ChangeFoodStatus(2);
         EndOfCoroutine();
@@ -96,8 +98,8 @@ public class FoodInteraction : MonoBehaviour
         StartOfCoroutine();        
         while (waitingBarImage.fillAmount > 0)
         {
-            waitingBarImage.fillAmount -= (1 / (peeTime * 60));
-            yield return null;
+            waitingBarImage.fillAmount -= (1 /(peeTime / Time.deltaTime));
+            yield return new WaitForSeconds(Time.deltaTime);
         }
         other.GetComponent<FoodStatus>().ChangeFoodStatus(3);
         EndOfCoroutine();
@@ -110,8 +112,8 @@ public class FoodInteraction : MonoBehaviour
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
-            waitingBarImage.fillAmount -= (1 / (pooTime * 60));
-            yield return null;
+            waitingBarImage.fillAmount -= (1 / (pooTime / Time.deltaTime));
+            yield return new WaitForSeconds(Time.deltaTime);
         }
         other.GetComponent<FoodStatus>().ChangeFoodStatus(4);
         EndOfCoroutine();
@@ -120,6 +122,7 @@ public class FoodInteraction : MonoBehaviour
     void StartOfCoroutine ()
     {
         isSpoilingFood = true;
+        animationInput.enabled = false;
         playerMovement.LockPlayerMovement();
         playerMovement.enabled = false;
         waitingBarImage.gameObject.SetActive(true);
@@ -128,6 +131,7 @@ public class FoodInteraction : MonoBehaviour
 
     void EndOfCoroutine ( )
     {
+        animationInput.enabled = true;
         playerMovement.enabled = true;
         isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);
@@ -137,6 +141,7 @@ public class FoodInteraction : MonoBehaviour
     {
         StopAllCoroutines();
         playerMovement.enabled = true;
+        animationInput.enabled = true;
         isSpoilingFood = false;
         waitingBarImage.gameObject.SetActive(false);
     }

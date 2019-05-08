@@ -13,9 +13,11 @@ public class HeadChefDetection : MonoBehaviour
     private FoodInteraction foodInteraction;
     private Transform player;
     private Image warningsImage;
+    private bool gameHasEnded;
 
     void Start()
     {
+        gameHasEnded = false;
         warningsImage = GameObject.Find("Warnings Image").GetComponent<Image>();
         warningsImage.fillAmount = 0;
         foodInteraction = GameObject.Find("Detection Trigger").GetComponent<FoodInteraction>();
@@ -25,8 +27,9 @@ public class HeadChefDetection : MonoBehaviour
 
     void Update()
     {
-        if (warningsImage.fillAmount >= 1)
+        if (warningsImage.fillAmount >= 1 && gameHasEnded == false)
         {
+            gameHasEnded = true;
             gameOver.OnGameOver();
         }
         else if (Vector3.Distance(transform.position, player.position) < detectionRadius && foodInteraction.isSpoilingFood)
