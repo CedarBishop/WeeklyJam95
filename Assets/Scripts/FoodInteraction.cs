@@ -10,12 +10,12 @@ public class FoodInteraction : MonoBehaviour
     public float peeTime = 10;
     public float pooTime = 15;
     public AudioClip[] spoilSFX;
+    public Image hintImage;
     [HideInInspector]public bool isSpoilingFood;
 
     private PlayerMovement playerMovement;
     private FlyAmmoLogic flyAmmoLogic;
     private AnimationInput animationInput;
-    private Text hintText;
     private Image waitingBarImage;
     private bool isNextToFood;    
 
@@ -24,16 +24,16 @@ public class FoodInteraction : MonoBehaviour
         animationInput = GameObject.Find("Player").GetComponent<AnimationInput>();
         flyAmmoLogic = GameObject.FindGameObjectWithTag("Player").GetComponent<FlyAmmoLogic>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        hintText = GameObject.Find("Hint Text").GetComponent<Text>();
         waitingBarImage = GameObject.Find("Waiting Bar Image").GetComponent<Image>();
         waitingBarImage.gameObject.SetActive(false);
+        hintImage.gameObject.SetActive(false);
     }
 
     void OnTriggerStay2D (Collider2D other)
     {
         if (other.gameObject.tag == "Food" && isSpoilingFood == false && (other.GetComponent<FoodStatus>().currentFoodStatus == FoodStatus.foodStatus.UnSpoilt || other.GetComponent<FoodStatus>().currentFoodStatus == FoodStatus.foodStatus.isBeingSpoiled))
-        { 
-            hintText.text = "Press Option To Spoil Food";
+        {
+            hintImage.gameObject.SetActive(true);
             if (Input.GetKeyDown(KeyCode.I) && flyAmmoLogic.flyAmmoImage.fillAmount >= 0.25f)
             {
                 flyAmmoLogic.UseFlyAmmo();
@@ -58,7 +58,7 @@ public class FoodInteraction : MonoBehaviour
         }
         else
         {
-            hintText.text = "";
+            hintImage.gameObject.SetActive(false);
         }
     }
     IEnumerator CoDropFlyInFood(Collider2D other)
