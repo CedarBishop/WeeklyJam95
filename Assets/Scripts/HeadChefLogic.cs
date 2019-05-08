@@ -8,8 +8,10 @@ public class HeadChefLogic : MonoBehaviour
     public float speed = 10;
     private Transform playerTransform;
     private int index = 0;
+    private Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -39,23 +41,31 @@ public class HeadChefLogic : MonoBehaviour
         Vector2 direction = (waypoints[index].position - transform.position).normalized;
         if (direction.x < -0.5f)
         {
-            // add anim set bool left here
-            print(gameObject.name + " is going left");
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingRight", false);
+            anim.SetBool("facingDown", false);
+            anim.SetBool("facingLeft", true);
         }
         else if (direction.x > 0.5f)
         {
-            // add anim set bool right here
-            print(gameObject.name + " is going right");
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingRight", true);
+            anim.SetBool("facingDown", false);
+            anim.SetBool("facingLeft", false);
         }
         else if (direction.y < -0.5f)
         {
-            // add anim set bool down here
-            print(gameObject.name + " is going down");
+            anim.SetBool("facingUp", false);
+            anim.SetBool("facingRight", false);
+            anim.SetBool("facingDown", true);
+            anim.SetBool("facingLeft", false);
         }
         else if (direction.y > 0.5f)
         {
-            // add anim set bool up here
-            print(gameObject.name + " is going up");
+            anim.SetBool("facingUp", true);
+            anim.SetBool("facingRight", false);
+            anim.SetBool("facingDown", false);
+            anim.SetBool("facingLeft", false);
         }
     }
 }

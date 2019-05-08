@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4032b5d9c5b5bc24abfe782499de2032
+guid: 202599622452f654395d5a7c37e3789d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2934537193391203678
-    second: Player Sprites_0
+      213: 6029178768203728998
+    second: Head Cef Sprites_0
   - first:
-      213: 5561252313898378945
-    second: Player Sprites_1
+      213: -8027199115701010928
+    second: Head Cef Sprites_1
   - first:
-      213: 3141024620073831917
-    second: Player Sprites_2
+      213: -5655236870316612842
+    second: Head Cef Sprites_2
   - first:
-      213: 3906316530790733968
-    second: Player Sprites_3
+      213: 7134878920773949190
+    second: Head Cef Sprites_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Sprites_0
+      name: Head Cef Sprites_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 4
         y: 98
-        width: 20
-        height: 27
+        width: 21
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a61456a456f6794ebc482ba7d240954
-      internalID: -2934537193391203678
+      spriteID: b68ad1b943a1f954fbfb7a1095d2ffe3
+      internalID: 6029178768203728998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Sprites_1
+      name: Head Cef Sprites_1
       rect:
         serializedVersion: 2
         x: 7
         y: 66
         width: 18
-        height: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d005299a30dfe7146a48fe1204fe215a
-      internalID: 5561252313898378945
+      spriteID: 0f1cfb9567d81b643bda21baae736d50
+      internalID: -8027199115701010928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Sprites_2
+      name: Head Cef Sprites_2
       rect:
         serializedVersion: 2
         x: 7
         y: 34
-        width: 20
-        height: 27
+        width: 21
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 269376d592b95c04285695f0214f515c
-      internalID: 3141024620073831917
+      spriteID: aca32ef7c69b59e459cc0120ec5935c8
+      internalID: -5655236870316612842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Sprites_3
+      name: Head Cef Sprites_3
       rect:
         serializedVersion: 2
         x: 7
         y: 2
         width: 18
-        height: 29
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1392874e03880384ca0240298fe24d1d
-      internalID: 3906316530790733968
+      spriteID: ac8e5a3df5dc9b4498a4bd235e2807a0
+      internalID: 7134878920773949190
       vertices: []
       indices: 
       edges: []
@@ -182,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7ebd657f8ce5d5f43a06cc5880584b6c
+    spriteID: a5c4e8c38eb063e47a22c6a0d542da8f
     internalID: 0
     vertices: []
     indices: 

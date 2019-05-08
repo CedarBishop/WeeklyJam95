@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerIdleLeft
+  m_Name: HeadChefIdleRight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3906316530790733968, guid: f3a88cb571ef0e548b333205c171ed55,
+      value: {fileID: -8027199115701010928, guid: 202599622452f654395d5a7c37e3789d,
         type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: d3a647f28145c0d44a70241774566fa1, type: 2}
+      value: {fileID: -8027199115701010928, guid: 37f9417304a128b43bac2750deaa7599,
+        type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,8 +44,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3906316530790733968, guid: f3a88cb571ef0e548b333205c171ed55, type: 3}
-    - {fileID: 21300000, guid: d3a647f28145c0d44a70241774566fa1, type: 2}
+    - {fileID: -8027199115701010928, guid: 202599622452f654395d5a7c37e3789d, type: 3}
+    - {fileID: -8027199115701010928, guid: 37f9417304a128b43bac2750deaa7599, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

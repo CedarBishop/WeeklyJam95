@@ -14241,11 +14241,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7472175326277935247, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
         type: 3}
-      propertyPath: waypoints.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472175326277935247, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
-        type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 498293426}
@@ -14304,26 +14299,6 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[11]
       value: 
       objectReference: {fileID: 483362249}
-    - target: {fileID: 7472175326277935247, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
-        type: 3}
-      propertyPath: speed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472175326277935232, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
-        type: 3}
-      propertyPath: detectionRadius
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472175326277935232, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
-        type: 3}
-      propertyPath: whatCanBeDetected.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472175326277935245, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1, type: 3}
 --- !u!114 &7472175326978913433 stripped
@@ -14353,7 +14328,7 @@ PrefabInstance:
     - target: {fileID: 7810552675902961569, guid: 388cf2e20eb9d7349a817aeab132e6a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7810552675902961501, guid: 388cf2e20eb9d7349a817aeab132e6a0,
         type: 3}

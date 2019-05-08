@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerIdleDown
+  m_Name: RestaurantOwnerIdleRight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3141024620073831917, guid: 4032b5d9c5b5bc24abfe782499de2032,
+      value: {fileID: -1286855334273742105, guid: d0da403b15efce84d974d3b6ab3ad535,
         type: 3}
     - time: 0.083333336
-      value: {fileID: 3141024620073831917, guid: 2757a1996f0569c48b10d51de422edc0,
+      value: {fileID: -1286855334273742105, guid: 6503d6d72763cde4287c4892d7c0876b,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,8 +44,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3141024620073831917, guid: 4032b5d9c5b5bc24abfe782499de2032, type: 3}
-    - {fileID: 3141024620073831917, guid: 2757a1996f0569c48b10d51de422edc0, type: 3}
+    - {fileID: -1286855334273742105, guid: d0da403b15efce84d974d3b6ab3ad535, type: 3}
+    - {fileID: -1286855334273742105, guid: 6503d6d72763cde4287c4892d7c0876b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
