@@ -13187,6 +13187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0e970da0088404792d4a5ea172764b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enterText: {fileID: 7810552675484334814}
   dialogueCanvas: {fileID: 1796492671}
   dialogueText: {fileID: 230811246}
   sentences:
@@ -13211,7 +13212,7 @@ PrefabInstance:
     - target: {fileID: 733637735201698443, guid: 1bc19d308d910e64da8f6be12b369967,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 733637735201698422, guid: 1bc19d308d910e64da8f6be12b369967,
         type: 3}
@@ -13628,21 +13629,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 350
       objectReference: {fileID: 0}
-    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4941002448362005736, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.a
@@ -13672,6 +13658,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473652201561387080, guid: 97ca240aae01827498b30cb58d7d5b14,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
@@ -14352,7 +14353,7 @@ PrefabInstance:
     - target: {fileID: 7810552675902961569, guid: 388cf2e20eb9d7349a817aeab132e6a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7810552675902961501, guid: 388cf2e20eb9d7349a817aeab132e6a0,
         type: 3}
@@ -14459,5 +14460,29 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 867411408, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6904898340883934}
+    - target: {fileID: 867411408, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 867411408, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
+--- !u!114 &7810552675484334814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 867411409, guid: 388cf2e20eb9d7349a817aeab132e6a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7810552675484334813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

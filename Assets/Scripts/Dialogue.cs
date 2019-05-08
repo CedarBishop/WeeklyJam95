@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+    public TextMeshProUGUI enterText;
     public Canvas dialogueCanvas;
     public Text dialogueText;
     public string[] sentences;
@@ -18,7 +20,7 @@ public class Dialogue : MonoBehaviour
     private FoodSpawner foodSpawner;
 
     void Start()
-    {
+    {        
         dialogueCanvas.gameObject.SetActive(true);
         dialogueText.text = "";
         StartCoroutine("Type");
@@ -30,6 +32,7 @@ public class Dialogue : MonoBehaviour
 
     void Update ()
     {
+        enterText.gameObject.SetActive(sentenceHasFinished);
         if (sentenceHasFinished)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -49,7 +52,7 @@ public class Dialogue : MonoBehaviour
         sentenceHasFinished = true;
     }
 
-    void NextSentence ()
+    public void NextSentence ()
     {
         dialogueText.text = "";
         sentenceHasFinished = false;
