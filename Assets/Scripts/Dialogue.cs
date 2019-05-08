@@ -66,6 +66,7 @@ public class Dialogue : MonoBehaviour
             index = 0;
             dialogueCanvas.gameObject.SetActive(false);
             ScriptsAffectedByDialogue(true);
+            foodSpawner.StartCoroutine("CoSpawnPlates");            
         }        
     }
 
@@ -75,7 +76,6 @@ public class Dialogue : MonoBehaviour
         {
             item.enabled = answer;
         }
-        foodSpawner.enabled = answer;
         playerMovement.enabled = answer;
         animationInput.enabled = answer;
     }

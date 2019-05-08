@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreLogic : MonoBehaviour
 {
     public Image scoreImage;
-    public Text reviewText;
+    public TMPro.TextMeshProUGUI reviewText;
     public Transform startPoint;
     public Transform endPoint;
     public float textSpeed = 1;

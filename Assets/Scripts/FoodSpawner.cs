@@ -10,12 +10,7 @@ public class FoodSpawner : MonoBehaviour
 
     private int randomPosition;
 
-    void Start ()
-    {
-        StartCoroutine("CoSpawnPlates");
-    }
-
-    IEnumerator CoSpawnPlates ()
+    public IEnumerator CoSpawnPlates ()
     {
         while (true)
         {
