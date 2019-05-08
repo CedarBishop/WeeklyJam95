@@ -11,7 +11,7 @@ public class Dialogue : MonoBehaviour
     public string[] sentences;
     public float typingSpeed = 1;
     public HeadChefLogic[] headChefLogics;
-    //public AudioClip buttonSound;
+    public AudioClip buttonSound;
 
     private int index;
     private bool sentenceHasFinished;
@@ -54,6 +54,7 @@ public class Dialogue : MonoBehaviour
 
     public void NextSentence ()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         dialogueText.text = "";
         sentenceHasFinished = false;
         if (index < sentences.Length - 1)

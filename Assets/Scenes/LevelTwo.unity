@@ -271,14 +271,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6904898340883934}
-    - target: {fileID: 867411408, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 867411408, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 388cf2e20eb9d7349a817aeab132e6a0, type: 3}
 --- !u!223 &70745167 stripped
@@ -1514,7 +1506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The Restaurant Went Out Of Business
+  m_Text: 'The Restaraunt Went Out Of Business
 
 
     You Win!!!'
@@ -12893,6 +12885,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 306819226, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7940013036d6964e8817afacce364d1, type: 3}
     - target: {fileID: 6904897538814110, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
       propertyPath: gameOverCanvas
       value: 
@@ -12901,10 +12897,18 @@ PrefabInstance:
       propertyPath: gameOverSFX
       value: 
       objectReference: {fileID: 8300000, guid: 73519acc72a4b1e48a0e3849f8490385, type: 3}
+    - target: {fileID: 6904897538814110, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7940013036d6964e8817afacce364d1, type: 3}
     - target: {fileID: 6904897538814106, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 774705127}
+    - target: {fileID: 6904897538814106, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: buttonClickSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: a7940013036d6964e8817afacce364d1, type: 3}
     - target: {fileID: 6904897538814111, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13056,14 +13060,15 @@ MonoBehaviour:
   - 'Voice in earpiece: Nice job with the last restaraunt.'
   - 'Voice in earpiece: However, this one is gonna be a lot more difficult.'
   - 'You: ...'
-  - 'Voice in earpiece: Word has spread about a sabateur going around so there will
-    be extra security.'
-  - 'Voice in earpiece: So stay cautious and good luck.'
+  - 'Voice in earpiece: Word has spread about a sabateur going around.'
+  - 'Voice in earpiece: There will be extra security, so stay cautious.'
+  - 'Voice in earpiece: Good luck.'
   - 'You: ...'
   typingSpeed: 0.5
   headChefLogics:
   - {fileID: 7472175326978913433}
   - {fileID: 1495235722898876567}
+  buttonSound: {fileID: 8300000, guid: b93bb4f927dd1664993aafe2c0c923c2, type: 3}
 --- !u!1001 &1495235722898876566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13340,10 +13345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1294373967, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 3473652200281377388, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.r
@@ -13357,12 +13358,32 @@ PrefabInstance:
     - target: {fileID: 3473652200281377388, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.7058824
+      value: 0.5882353
       objectReference: {fileID: 0}
     - target: {fileID: 3473652200281377388, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.b
       value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3473652199837850295, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
@@ -13469,22 +13490,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 350
-      objectReference: {fileID: 0}
     - target: {fileID: 4941002448362005736, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.7058824
+      value: 0.5882353
       objectReference: {fileID: 0}
     - target: {fileID: 2100710595019064292, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
@@ -13504,27 +13513,23 @@ PrefabInstance:
     - target: {fileID: 2100710595019064292, guid: 97ca240aae01827498b30cb58d7d5b14,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.7058824
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_text
-      value: 
+    - target: {fileID: 1294373967, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
+    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
       objectReference: {fileID: 0}
-    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
+    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
       objectReference: {fileID: 0}
-    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2003852802, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+    - target: {fileID: 1294373966, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
@@ -13667,6 +13672,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 306819226}
+    - target: {fileID: 744312005, guid: df24e3175c630994191c2beb5dd3c219, type: 3}
+      propertyPath: m_Text
+      value: 'The Restaraunt did well
+
+        You Lose'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df24e3175c630994191c2beb5dd3c219, type: 3}
 --- !u!1001 &5557411703605555106
@@ -13804,18 +13815,24 @@ PrefabInstance:
     - target: {fileID: 5557411704197220152, guid: c5d0368ac7f7c604ca807445f52f4386,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.5377358
       objectReference: {fileID: 0}
     - target: {fileID: 5557411704197220152, guid: c5d0368ac7f7c604ca807445f52f4386,
         type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.5377358
       objectReference: {fileID: 0}
     - target: {fileID: 5557411704197220152, guid: c5d0368ac7f7c604ca807445f52f4386,
         type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.5377358
       objectReference: {fileID: 0}
+    - target: {fileID: 5557411704197220152, guid: c5d0368ac7f7c604ca807445f52f4386,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59fc020de32925b41950f88de9af646e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d0368ac7f7c604ca807445f52f4386, type: 3}
 --- !u!1001 &6122853437450979862

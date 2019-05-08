@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseLogic : MonoBehaviour
 {
     public Canvas pauseCanvas;
     public string sceneName;
+    public AudioClip buttonClickSFX;
 
     void Start()
     {
@@ -27,18 +26,21 @@ public class PauseLogic : MonoBehaviour
 
     public void Resume ()
     {
+        SoundManager.instance.PlaySFX(buttonClickSFX);
         pauseCanvas.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void Pause ()
     {
+        SoundManager.instance.PlaySFX(buttonClickSFX);
         pauseCanvas.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void MainMenu()
     {
+        SoundManager.instance.PlaySFX(buttonClickSFX);
         SceneManager.LoadScene(sceneName);
     }
 }

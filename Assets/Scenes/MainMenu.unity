@@ -399,6 +399,7 @@ MonoBehaviour:
   - LevelTwo
   startCanvas: {fileID: 1649672387}
   levelSelectCanvas: {fileID: 1728841031}
+  buttonSound: {fileID: 8300000, guid: a7940013036d6964e8817afacce364d1, type: 3}
 --- !u!4 &293410418
 Transform:
   m_ObjectHideFlags: 0
@@ -988,7 +989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restaurant Saboteur
+  m_Text: Restaraunt Saboteur
 --- !u!222 &1213624855
 CanvasRenderer:
   m_ObjectHideFlags: 0

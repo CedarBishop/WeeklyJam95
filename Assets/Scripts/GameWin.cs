@@ -8,6 +8,7 @@ public class GameWin : MonoBehaviour
     public Canvas gameWinCanvas;
     public string nextLevel;
     public AudioClip victorySFX;
+    public AudioClip buttonSound;
     void Start()
     {
         gameWinCanvas.gameObject.SetActive(false);
@@ -22,11 +23,13 @@ public class GameWin : MonoBehaviour
 
     public void NextLevel ()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         SceneManager.LoadScene(nextLevel);
     }
 
     public void MainMenu ()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         SceneManager.LoadScene("MainMenu");
     }
 }

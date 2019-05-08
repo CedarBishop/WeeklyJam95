@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
+  gameOverSFX: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &6904897538814104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 0}
   sceneName: MainMenu
+  buttonClickSFX: {fileID: 0}
 --- !u!114 &306819226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +133,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameWinCanvas: {fileID: 0}
   nextLevel: LevelTwo
+  victorySFX: {fileID: 0}
+  buttonSound: {fileID: 0}

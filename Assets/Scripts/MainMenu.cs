@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public string[] levelNames;
     public Canvas startCanvas;
     public Canvas levelSelectCanvas;
+    public AudioClip buttonSound;
 
     void Start()
     {
@@ -18,27 +19,32 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         startCanvas.gameObject.SetActive(false);
         levelSelectCanvas.gameObject.SetActive(true);
     }
 
     public void QuitGame()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         Application.Quit();
     }
 
     public void LevelOne()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         SceneManager.LoadScene(levelNames[0]);
     }
 
     public void LevelTwo()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         SceneManager.LoadScene(levelNames[1]);
     }
 
     public void Return()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         startCanvas.gameObject.SetActive(true);
         levelSelectCanvas.gameObject.SetActive(false);
     }

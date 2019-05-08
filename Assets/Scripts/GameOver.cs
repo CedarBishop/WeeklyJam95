@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public Canvas gameOverCanvas;
     public AudioClip gameOverSFX;
+    public AudioClip buttonSound;
 
     void Start ()
     {
@@ -23,6 +24,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartLevel()
     {
+        SoundManager.instance.PlaySFX(buttonSound);
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
