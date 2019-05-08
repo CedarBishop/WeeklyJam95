@@ -24,11 +24,38 @@ public class HeadChefLogic : MonoBehaviour
             if (index < waypoints.Length - 1)
             {
                 index++;
+                GetDirectionToTarget();
             }
             else if (index == waypoints.Length - 1)
             {
                 index = 0;
-            }
+                GetDirectionToTarget();
+            }            
+        }
+    }
+
+    void GetDirectionToTarget ()
+    {
+        Vector2 direction = (waypoints[index].position - transform.position).normalized;
+        if (direction.x < -0.5f)
+        {
+            // add anim set bool left here
+            print(gameObject.name + " is going left");
+        }
+        else if (direction.x > 0.5f)
+        {
+            // add anim set bool right here
+            print(gameObject.name + " is going right");
+        }
+        else if (direction.y < -0.5f)
+        {
+            // add anim set bool down here
+            print(gameObject.name + " is going down");
+        }
+        else if (direction.y > 0.5f)
+        {
+            // add anim set bool up here
+            print(gameObject.name + " is going up");
         }
     }
 }
