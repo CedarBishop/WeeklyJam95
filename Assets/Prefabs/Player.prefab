@@ -123,7 +123,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!114 &2048846672899479404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,10 +325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711de2ed1cd80034c9eb5fd1b0a075ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropFlyTime: 3
-  spitTime: 5
-  peeTime: 10
-  pooTime: 15
+  dropFlyTime: 2
+  spitTime: 4
+  peeTime: 8
+  pooTime: 12
   spoilSFX:
   - {fileID: 8300000, guid: cc4426835f863714c9b49f2635d79ef1, type: 3}
   - {fileID: 8300000, guid: 428000487aac6214ea00fee6d215d683, type: 3}
