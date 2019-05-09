@@ -13135,6 +13135,34 @@ PrefabInstance:
       propertyPath: scores.Array.data[1]
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: ratingOutlineImage
+      value: 
+      objectReference: {fileID: 3473652201789869469}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: ratingImage
+      value: 
+      objectReference: {fileID: 3473652201789869468}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: reviews.Array.data[0]
+      value: Mmm Delicious.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: reviews.Array.data[1]
+      value: There's a fly in my soup, still delicious though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: reviews.Array.data[2]
+      value: This soup is too watery and bland.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: reviews.Array.data[3]
+      value: Way too salty, it almost tastes like someone's pee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904897538814104, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
+      propertyPath: reviews.Array.data[4]
+      value: WTF!!! Someone pooped in my lasagna.
+      objectReference: {fileID: 0}
     - target: {fileID: 6904897538814105, guid: 1fe49239104ae074986828be3e9f86c9, type: 3}
       propertyPath: spawnLocations.Array.size
       value: 7
@@ -13685,11 +13713,43 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 496148236, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 496148236, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ca240aae01827498b30cb58d7d5b14, type: 3}
 --- !u!114 &3473652201789869467 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1445305244, guid: 97ca240aae01827498b30cb58d7d5b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 3473652201789869466}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3473652201789869468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1495861462, guid: 97ca240aae01827498b30cb58d7d5b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 3473652201789869466}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3473652201789869469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 496148237, guid: 97ca240aae01827498b30cb58d7d5b14,
     type: 3}
   m_PrefabInstance: {fileID: 3473652201789869466}
   m_PrefabAsset: {fileID: 0}
@@ -14503,6 +14563,11 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[11]
       value: 
       objectReference: {fileID: 483362249}
+    - target: {fileID: 7472175326277935247, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1,
+        type: 3}
+      propertyPath: speed
+      value: 1.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9b055cd46b4ee499bb7bc164fcb9e1, type: 3}
 --- !u!114 &7472175326978913433 stripped

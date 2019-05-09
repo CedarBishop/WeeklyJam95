@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ScoreLogic : MonoBehaviour
 {
     public Image scoreImage;
+    public Image ratingOutlineImage;
+    public Image ratingImage;
     public TMPro.TextMeshProUGUI reviewText;
     public Transform startPoint;
     public Transform endPoint;
@@ -18,12 +20,17 @@ public class ScoreLogic : MonoBehaviour
     void Start()
     {
         gameWin = GetComponent<GameWin>();
+        ratingOutlineImage.gameObject.SetActive(false);
+        ratingImage.gameObject.SetActive(false);
         reviewText.text = "";
         scoreImage.fillAmount = 0;
     }
 
     public void AddToScore (int foodCondition)
     {
+        ratingOutlineImage.gameObject.SetActive(true);
+        ratingImage.gameObject.SetActive(true);
+        ratingImage.fillAmount = 1 - (foodCondition * 0.2f);
         reviewText.text = reviews[foodCondition];
         scoreImage.fillAmount += scores[foodCondition];       
         StartCoroutine("ResetText");
@@ -39,6 +46,8 @@ public class ScoreLogic : MonoBehaviour
             yield return null;
         }
         reviewText.text = "";
+        ratingOutlineImage.gameObject.SetActive(false);
+        ratingImage.gameObject.SetActive(false);
     }
 
     void CheckIfGameIsWon ()
