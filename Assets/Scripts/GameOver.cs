@@ -7,14 +7,17 @@ public class GameOver : MonoBehaviour
     public AudioClip gameOverSFX;
     public AudioClip buttonSound;
 
+    private PauseLogic pauseLogic;
     void Start ()
     {
+        pauseLogic = GetComponent<PauseLogic>();
         Time.timeScale = 1;
         gameOverCanvas.gameObject.SetActive(false);
     }
 
     public void OnGameOver ()
     {
+        pauseLogic.CannotPause();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0;
