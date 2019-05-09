@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +16,8 @@ public class FoodInteraction : MonoBehaviour
     private FlyAmmoLogic flyAmmoLogic;
     private AnimationInput animationInput;
     private Image waitingBarImage;
-    private bool isNextToFood;    
+    private bool isNextToFood;
+    private bool forcedStop;
 
     void Start()
     {
@@ -60,11 +60,15 @@ public class FoodInteraction : MonoBehaviour
         {
             hintImage.gameObject.SetActive(false);
         }
+        if (other.gameObject.tag == "Food" && forcedStop)
+        {
+            forcedStop = false;
+            Destroy(other.gameObject);
+        }
     }
     IEnumerator CoDropFlyInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-       // other.GetComponent<FoodStatus>().ChangeFoodColor(1);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -78,7 +82,6 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoSpitInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-       // other.GetComponent<FoodStatus>().ChangeFoodColor(2);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -94,7 +97,6 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPeeInFood (Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-        //other.GetComponent<FoodStatus>().ChangeFoodColor(3);
         StartOfCoroutine();        
         while (waitingBarImage.fillAmount > 0)
         {
@@ -108,7 +110,6 @@ public class FoodInteraction : MonoBehaviour
     IEnumerator CoPooInFood(Collider2D other)
     {
         other.GetComponent<FoodStatus>().ChangeFoodStatus(5);
-       // other.GetComponent<FoodStatus>().ChangeFoodColor(4);
         StartOfCoroutine();
         while (waitingBarImage.fillAmount > 0)
         {
@@ -140,6 +141,7 @@ public class FoodInteraction : MonoBehaviour
     public void StopSpoiling ()
     {
         StopAllCoroutines();
+        forcedStop = true;
         playerMovement.enabled = true;
         animationInput.enabled = true;
         isSpoilingFood = false;

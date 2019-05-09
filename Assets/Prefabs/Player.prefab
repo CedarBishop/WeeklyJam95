@@ -334,4 +334,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 428000487aac6214ea00fee6d215d683, type: 3}
   - {fileID: 8300000, guid: f5cc69c48eb36884ea40d70c6e3ca871, type: 3}
   - {fileID: 8300000, guid: 2902c09075cbd524680ea1dc2b60eef4, type: 3}
+  hintImage: {fileID: 0}
   isSpoilingFood: 0

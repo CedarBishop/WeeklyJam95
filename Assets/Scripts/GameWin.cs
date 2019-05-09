@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameWin : MonoBehaviour
@@ -9,13 +7,17 @@ public class GameWin : MonoBehaviour
     public string nextLevel;
     public AudioClip victorySFX;
     public AudioClip buttonSound;
+
+    private PauseLogic pauseLogic;
     void Start()
     {
         gameWinCanvas.gameObject.SetActive(false);
+        pauseLogic = GetComponent<PauseLogic>();
     }
 
     public void OnGameWin ()
     {
+        pauseLogic.CannotPause();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         SoundManager.instance.PlaySFX(victorySFX);
