@@ -1,49 +1,61 @@
 fileFormatVersion: 2
-guid: 5d6fb786f945a3e40bb365444d84004f
+guid: 68878b199928eb14789f9f8079c7d673
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3729349727813967280
-    second: Max's Spritesheet_0
+      213: -1999423592422126611
+    second: Title Background_0
   - first:
-      213: 1502495027604390323
-    second: Max's Spritesheet_1
+      213: 8667889594758551190
+    second: Title Background_1
   - first:
-      213: 1126128381234717596
-    second: Max's Spritesheet_2
+      213: 6543571827369188150
+    second: Title Background_2
   - first:
-      213: -1341275017183523590
-    second: Max's Spritesheet_3
+      213: -6873134331129587691
+    second: Title Background_3
   - first:
-      213: 1726546199352748654
-    second: Max's Spritesheet_4
+      213: 3710642229785275298
+    second: Title Background_4
   - first:
-      213: 2552131077388511519
-    second: Max's Spritesheet_5
+      213: 3412050800132575547
+    second: Title Background_5
   - first:
-      213: 5269356181986215222
-    second: Max's Spritesheet_6
+      213: -1911344382848343095
+    second: Title Background_6
   - first:
-      213: -6051390054538204657
-    second: Max's Spritesheet_7
+      213: 7614302229217561004
+    second: Title Background_7
   - first:
-      213: 2502052300178764605
-    second: Max's Spritesheet_8
+      213: -3314523302157798463
+    second: Title Background_8
   - first:
-      213: 7742146140075883315
-    second: Max's Spritesheet_9
+      213: 3821762472913088657
+    second: Title Background_9
   - first:
-      213: -1401191000478200138
-    second: Max's Spritesheet_10
+      213: 5502730994332856178
+    second: Title Background_10
   - first:
-      213: 3528705940210587787
-    second: Max's Spritesheet_11
+      213: -5425632442292142999
+    second: Title Background_11
+  - first:
+      213: -9214330767271036863
+    second: Title Background_12
+  - first:
+      213: -5422455260049236778
+    second: Title Background_13
+  - first:
+      213: 4391389601603361983
+    second: Title Background_14
+  - first:
+      213: 3021219990262774128
+    second: Title Background_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -67,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -98,7 +110,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -109,18 +121,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -131,265 +132,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Max's Spritesheet_0
+      name: Title Background_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
-        width: 64
-        height: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -127, y: -48}
-        - {x: -128, y: 48}
-        - {x: -63, y: 48}
-        - {x: -64, y: -47}
-      - - {x: -63, y: -47}
-        - {x: -63, y: 48}
-        - {x: 33, y: 48}
-        - {x: 33, y: -47}
-      - - {x: 33, y: 18}
-        - {x: 33, y: 48}
-        - {x: 127, y: 48}
-        - {x: 127, y: 18}
-      physicsShape: []
-      tessellationDetail: 1
-      bones: []
-      spriteID: 51058ebd5cade1146b9317d3cbdf2ca3
-      internalID: 3729349727813967280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Max's Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 201
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec578a7f4da6ed4daa8391858fb4dab
-      internalID: 1502495027604390323
+      spriteID: c43c70220a9873b47b37677b0e24fcd8
+      internalID: -1999423592422126611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_2
+      name: Title Background_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d613160cb7ff8b54fa58e043e5e3b369
+      internalID: 8667889594758551190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 224
-        width: 96
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9b3ddad7e06ead4da82af7cd0ca35a1
-      internalID: 1126128381234717596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Max's Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 287
-        width: 96
+        y: 96
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a89c4a91229733748943d6ac6668e365
-      internalID: -1341275017183523590
+      spriteID: c1e7f6321fb1d5f469f77ad7b9e5dab6
+      internalID: 6543571827369188150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_4
+      name: Title Background_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a829b3652e8b54cad79ce24a5a4501
+      internalID: -6873134331129587691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 225
-        width: 64
-        height: 95
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9808985bfc2f34444a0e23a6c762c4e7
-      internalID: 1726546199352748654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Max's Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 201
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a03b90b08266c649898d7df79550979
-      internalID: 2552131077388511519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Max's Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf5796cc70a44543aa1fba848e698c9
-      internalID: 5269356181986215222
+      spriteID: 6180e08028610044b9580d49f6cc6ed7
+      internalID: 3710642229785275298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_7
+      name: Title Background_5
       rect:
         serializedVersion: 2
-        x: 287
-        y: 256
+        x: 32
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c1e25c7424dd6d43b9e0d24fd6971d1
-      internalID: -6051390054538204657
+      spriteID: 86f0c694e1453ec4db830f9fca06e426
+      internalID: 3412050800132575547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_8
+      name: Title Background_6
       rect:
         serializedVersion: 2
-        x: 288
-        y: 224
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6c661a576b3b2f41829f564ed48f64b
-      internalID: 2502052300178764605
+      spriteID: 2125d57a5de1f354fb6b70aa7c18eb6e
+      internalID: -1911344382848343095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_9
+      name: Title Background_7
       rect:
         serializedVersion: 2
-        x: 288
-        y: 192
+        x: 96
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e744a8c401c0c02448c5a6ca92e9e0d5
-      internalID: 7742146140075883315
+      spriteID: c81205d84bca47a4e9d5169cd9611f81
+      internalID: 7614302229217561004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_10
+      name: Title Background_8
       rect:
         serializedVersion: 2
-        x: 256
-        y: 288
-        width: 64
+        x: 0
+        y: 32
+        width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9b7b7c0e3885464ebb9eec9e36d307f
-      internalID: -1401191000478200138
+      spriteID: a3a056cb63e9d014c931078b05264216
+      internalID: -3314523302157798463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Max's Spritesheet_11
+      name: Title Background_9
       rect:
         serializedVersion: 2
-        x: 257
-        y: 224
+        x: 32
+        y: 32
         width: 32
-        height: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acf54f85411b711459962bf06bf4e57a
-      internalID: 3528705940210587787
+      spriteID: 852ee2084fb2cc140baa9cf4ab1ff291
+      internalID: 3821762472913088657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98714b175b366174abfe7c3cb180dae2
+      internalID: 5502730994332856178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf45eb605eec75468dd9c666df0e0ff
+      internalID: -5425632442292142999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fec56bd34113d4faa866304e9cd827
+      internalID: -9214330767271036863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76df5df8e65cd374ea9eefa27a65506a
+      internalID: -5422455260049236778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f34e1e8da5e6754097e667aed8eb7d4
+      internalID: 4391389601603361983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Title Background_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b19a9c0e28ba74a8096851afd83154
+      internalID: 3021219990262774128
       vertices: []
       indices: 
       edges: []
@@ -397,7 +470,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3d267e510d527154b920fb526e0b3cf5
+    spriteID: 5d897b2b52580574ab999db345abd7f6
     internalID: 0
     vertices: []
     indices: 
