@@ -26,6 +26,8 @@ public class PauseLogic : MonoBehaviour
 
     public void Resume ()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SoundManager.instance.PlaySFX(buttonClickSFX);
         pauseCanvas.gameObject.SetActive(false);
         Time.timeScale = 1;
@@ -33,6 +35,8 @@ public class PauseLogic : MonoBehaviour
 
     public void Pause ()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SoundManager.instance.PlaySFX(buttonClickSFX);
         pauseCanvas.gameObject.SetActive(true);
         Time.timeScale = 0;

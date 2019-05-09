@@ -17,6 +17,8 @@ public class GameOver : MonoBehaviour
 
     public void OnGameOver ()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0;
         gameOverCanvas.gameObject.SetActive(true);
         SoundManager.instance.PlaySFX(gameOverSFX);

@@ -16,6 +16,8 @@ public class GameWin : MonoBehaviour
 
     public void OnGameWin ()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SoundManager.instance.PlaySFX(victorySFX);
         Time.timeScale = 0;
         gameWinCanvas.gameObject.SetActive(true);
